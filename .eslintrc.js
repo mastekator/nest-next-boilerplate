@@ -22,7 +22,11 @@ module.exports = {
         browser: true,
         node: true
     },
-    ignorePatterns: ['.eslintrc.js', 'node_modules'],
+    ignorePatterns: [
+        '.eslintrc.js',
+        'node_modules',
+        'src/client/components/UI/iconComponents/*.tsx'
+    ],
     'rules': {
         'max-len': [
             'error',
