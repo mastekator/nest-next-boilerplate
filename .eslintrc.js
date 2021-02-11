@@ -4,20 +4,20 @@ module.exports = {
         ecmaFeatures: {
             jsx: true
         },
-        project: 'tsconfig.json',
+        ecmaVersion: 2018,
         sourceType: 'module'
     },
-    plugins: ['@typescript-eslint/eslint-plugin', 'react'],
+    plugins: ['@typescript-eslint', 'react', 'nestjs'],
     extends: [
         'plugin:react/recommended',
         'plugin:react-hooks/recommended',
         'plugin:@typescript-eslint/recommended',
+        'plugin:nestjs/recommended',
         'eslint:recommended',
         'google'
     ],
     root: true,
     env: {
-        jest: true,
         es6: true,
         browser: true,
         node: true
@@ -38,6 +38,7 @@ module.exports = {
                 'ignoreRegExpLiterals': true
             }
         ],
+        'new-cap': 'off',
         'semi': 'off',
         'arrow-parens': 'off',
         'comma-dangle': 'off',
@@ -50,6 +51,8 @@ module.exports = {
         'linebreak-style': 'off'
     },
     globals: {
-        JSX: 'readonly'
+        Atomics: 'readonly',
+        SharedArrayBuffer: 'readonly',
+        React: 'writable'
     }
 }
